@@ -4,19 +4,19 @@ import axios from "axios";
 const CommentList = ({ postId, comments, setComments }) => {
   
 
-  const fetchData = async () => {
-    const res = await axios.get(
-      `http://localhost:4001/posts/${postId}/comments`
-    );
+  // const fetchData = async () => {
+  //   const res = await axios.get(
+  //     `http://localhost:4001/posts/${postId}/comments`
+  //   );
 
-    setComments(prevState => ({...prevState, [postId]: res.data}));
-  };
+  //   setComments(prevState => ({...prevState, [postId]: res.data}));
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
-  const renderedComments = comments?.[postId]?.map((comment) => {
+  const renderedComments = comments?.map((comment) => {
     return <li key={comment.id}>{comment.content}</li> || <></>;
   });
 

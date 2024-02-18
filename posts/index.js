@@ -19,7 +19,7 @@ fastify.get('/posts', (req, reply) => {
 
 fastify.post('/posts', async (req, reply) => {
     const id = randomBytes(4).toString('hex')
-    const { title } = req.body;
+    const { title } = req.body
 
     posts[id] = {id, title};
     await axios.post('http://localhost:4005/events', {
@@ -33,7 +33,7 @@ fastify.post('/posts', async (req, reply) => {
 })
 
 fastify.post('/events', (req,res) => {
-    console.log(`Event received of type ${req.body.type}`)
+    console.log(`Event received of type ${req.body.type}`);
     res.send({status: 'OK'})
 })
 
