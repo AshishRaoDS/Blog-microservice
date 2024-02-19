@@ -1,0 +1,23 @@
+{
+  "name": "blog-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon posts/index.js & nodemon comments/index.js & nodemon event-bus/index.js & nodemon query/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshishRaoDS/Blog-microservice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshishRaoDS/Blog-microservice/issues"
+  },
+  "homepage": "https://github.com/AshishRaoDS/Blog-microservice#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
